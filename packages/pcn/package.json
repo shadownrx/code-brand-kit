@@ -1,0 +1,54 @@
+{
+  "name": "pcn-code",
+  "displayName": "PCN code",
+  "description": "Configuración compartida, logo y mascota PCN para Mac y Windows.",
+  "publisher": "pcn",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "icon": "media/pcn.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pcn.apply",
+        "title": "PCN: Aplicar configuración y marca del chat"
+      },
+      {
+        "command": "pcn.restore",
+        "title": "PCN: Restaurar configuración anterior"
+      },
+      {
+        "command": "pcn.throwBall",
+        "title": "PCN: Tirar pelotita",
+        "icon": "$(circle-filled)"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "pcn.mascot",
+          "name": "PCN"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "pcn.throwBall",
+          "when": "view == pcn.mascot",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "license": "UNLICENSED"
+}

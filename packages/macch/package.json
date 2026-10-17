@@ -1,0 +1,54 @@
+{
+  "name": "macch-code",
+  "displayName": "Macch Code",
+  "description": "Configuración compartida, logo y mascota Macch para Mac y Windows.",
+  "publisher": "pcn",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "icon": "media/pcn.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "macch.apply",
+        "title": "Macch: Aplicar configuración y marca del chat"
+      },
+      {
+        "command": "macch.restore",
+        "title": "Macch: Restaurar configuración anterior"
+      },
+      {
+        "command": "macch.throwBall",
+        "title": "Macch: Tirar pelotita",
+        "icon": "$(circle-filled)"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "macch.mascot",
+          "name": "Macch"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "macch.throwBall",
+          "when": "view == macch.mascot",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "license": "UNLICENSED"
+}

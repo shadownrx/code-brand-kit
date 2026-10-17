@@ -1,0 +1,17 @@
+hsnazar.hyper-term-theme
+openai.codex-audio
+openai.chatgpt
+facmartoni.depotbar-terminal
+strigo.linear
+linear.linear-connect
+ritwickdey.liveserver
+vue.volar
+shalldie.background
+ms-python.vscode-python-envs
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+denizhandaklr.muse-code-for-copilot
+anthropic.claude-code
+pkief.material-icon-theme
+tonybaloney.vscode-pets
