@@ -20,5 +20,5 @@ test('portable settings and public extension IDs only',()=>{
  const s=fs.readFileSync(path.resolve(__dirname,'../packages',v,'settings.json'),'utf8');assert.ok(!s.includes('/Users/'));assert.ok(!s.includes('salvador'));JSON.parse(s);
  const js=fs.readFileSync(path.resolve(__dirname,'../packages',v,'chat-brand.js'),'utf8').replace('__BRAND__','"Test"').replace('__LOGO__','"data:image/png;base64,a"');new vm.Script(js);
  }
- const ids=fs.readFileSync(path.resolve(__dirname,'../extensions.txt'),'utf8').trim().split('\n');assert.ok(ids.every(id=>/^[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$/.test(id)));
+ const ids=fs.readFileSync(path.resolve(__dirname,'../extensions.txt'),'utf8').trim().split(/\r?\n/);assert.ok(ids.every(id=>/^[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+$/.test(id)));
 });
